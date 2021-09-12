@@ -4,7 +4,7 @@ mkdir -p /tmp/investigation
 cd /tmp/investigation
 
 # for every java pid get list of accessed files and get path of these files via awk, then pipe it to file
-for pid in $(pgrep -f brave)
+for pid in $(pgrep -f java)
 do
   lsof -p $pid | awk '{print $9}' | grep '^/' > access_$pid.txt
 done
