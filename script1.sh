@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -z $1 ]
+if [ $# -lt 2 ]
 then
   old="nginx-01.com"
   new="nginx-02.com"
